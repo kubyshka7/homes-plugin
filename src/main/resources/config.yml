@@ -1,0 +1,33 @@
+storage:
+  postgres:
+    host: "localhost"
+    port: 5432
+    database: "minecraft"
+    schema: "public"     # опционально
+    user: "postgres"
+    password: "change_me"  # задайте свой пароль от PostgreSQL
+    ssl: false           # опционально
+    hikari:
+      maximumPoolSize: 10
+      minimumIdle: 2
+      connectionTimeoutMs: 10000
+
+limits:
+  default: 3
+
+messages:
+  home_set: "§aДом сохранён: {name}"
+  home_deleted: "§cДом удалён: {name}"
+  home_not_found: "§cДом не найден: {name}"
+  no_permission: "§cНедостаточно прав."
+  db_error: "§cБаза временно недоступна, попробуй позже."
+  home_limit: "§cДостигнут лимит домов: {limit}"
+  home_teleport: "§aТелепортация к дому {name}"
+  home_teleport_pending: "§eТелепортация через §610 §eсекунд..."
+  home_teleport_cancelled_damage: "§cТелепортация отменена — ты получил урон!"
+  home_updated: "§aДом {name} обновлён."
+  home_renamed: "§aДом переименован: {old} §a→ §6{new}"
+  home_new_prompt: "§eНапиши имя нового дома в чат:"
+  home_new_prompt_default: "§7Напиши §f- §7чтобы использовать имя §fdefault"
+  invalid_name: "§cНедопустимое имя. Только буквы, цифры, _ и -"
+  world_not_found: "§cМир не найден."
